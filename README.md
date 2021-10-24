@@ -12,6 +12,7 @@ zig-releaser is a hack that allows Zig programs to be built, packaged, and relea
 
 - Copy `dummy.go`, `build.sh`, `.goreleaser` from this repo to the root of the Zig project.
 - Edit `.goreleaser` for the project (generally the `binary`, `goos`, `files` fields).
+- Edit `build.sh` script to tweak the zig build flags.
 
 Once the project is ready for release, add a semver tag (`git tag -a v0.1.0 -m v0.1.0`)
 
