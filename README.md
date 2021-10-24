@@ -6,7 +6,7 @@ zig-releaser is a hack that allows Zig programs to be built, packaged, and relea
 
 ### How to use
 
-- Install [Go](https://golang.org/doc/install). Unfortunately, GoRelease is tightly coupled with Go.
+- Install [Go](https://golang.org/doc/install). Unfortunately, GoReleaser is tightly coupled with Go.
 - Install [GoReleaser](https://goreleaser.com/install/). Setup the [GitHub token](https://goreleaser.com/quick-start/).
 
 
