@@ -1,25 +1,29 @@
 # .goreleaser.yml
 builds:
-  # The Zig executable name (specified in build.zig)
-  - binary: csv2json
+    # The Zig executable name (specified in build.zig)
+  - binary: hello-zig
+    # We should be able to use this, no go-dummy, but it seems broken right now
+    #builder: prebuilt
+    gobinary: ./.goreleaser/go-dummy
+    main: ./.goreleaser/dummy.go
     goos:
       - darwin
       - linux
       - windows
     goarch:
       - amd64
+    goamd64:
+      - v1
 
     hooks:
       # This is called for every architecture.
       # eg: ./build.sh linux_amd64 csv2json
-      post: ./build.sh "{{ .Os }}_{{ .Arch }}" "{{ .ProjectName }}"
-
-    main: dummy.go
+      post: ./.goreleaser/build.sh "{{ .Os }}" "{{ .Arch }}" "{{ .ProjectName }}" "{{ .Arm }}"
 
 archives:
   - format: tar.gz
 
-    # Additional static to bundle in the release. 
+    # Additional static to bundle in the release.
     files:
       - README.md
       - LICENSE
