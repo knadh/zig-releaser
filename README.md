@@ -1,4 +1,8 @@
-# zig-releaser
+# GoReleaser v2 Official Support 🎉
+
+See <https://goreleaser.com/quick-start/>.
+
+# zig-releaser (old, GoReleaser v1)
 
 zig-releaser is a hack that allows Zig programs to be built, packaged, and released with [GoReleaser](https://goreleaser.com), a tool for publishing Go programs.
 
